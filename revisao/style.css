@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
