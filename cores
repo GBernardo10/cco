@@ -1,0 +1,11 @@
+verde: #27AE60
+amarelo: #F1C40F
+vermeleho: #CB4335
+
+:root{
+  --text-color:#CB4335
+}
+
+p {
+  color:var(--text-color)
+}
