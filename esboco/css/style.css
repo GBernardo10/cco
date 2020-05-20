@@ -22,25 +22,37 @@ body {
   margin-bottom: 25px;
   border-radius: 5px;
   height: 130px;
-  background-color: white;
+  background-color: rgb(212, 212, 212);
 }
 
+.box-green {
+  background: #27ae60;
+}
+.box-yellow {
+  background: #f1c40f;
+}
 
-.graph-1 {
+.box-red {
+  background: #cb4335;
+}
+
+.graph {
   margin: 5px;
   display: inline-block;
   border-radius: 5px;
   height: 300px;
-  background-color: white;
+  background: white;
+}
+
+.graph img {
+  height: 220px;
+}
+
+.graph-1 {
   width: 61%;
 }
 
 .graph-2 {
-  margin: 5px;
-  display: inline-block;
-  border-radius: 5px;
-  height: 300px;
-  background-color: white;
   width: 30%;
 }
 
