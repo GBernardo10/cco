@@ -1,3 +1,7 @@
+:root {
+  --color-primary: #e8491d;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -20,7 +24,7 @@ body {
 
 .header {
   background-color: #252323;
-  border-bottom: orange 5px solid;
+  border-bottom: var(--color-primary) 5px solid;
   width: 100%;
 }
 
@@ -32,7 +36,7 @@ body {
 }
 
 .titulo span {
-  color: orange;
+  color: var(--color-primary);
 }
 
 .nav ul li {
@@ -42,7 +46,7 @@ body {
 }
 
 .nav .current a {
-  color: orange;
+  color: var(--color-primary);
 }
 
 .nav a {
@@ -93,16 +97,15 @@ body {
   margin-top: 15px;
 }
 
-.new input{
+.new input {
   padding: 4px;
   height: 25px;
   width: 250px;
 }
 
-
-.button_1{
+.button_1 {
   height: 38px;
-  background: #e8491d;
+  background: var(--color-primary);
   border: 0;
   padding-left: 20px;
   padding-right: 20px;
@@ -125,12 +128,12 @@ body {
 }
 
 .footer {
-  background: #e8491d;
+  background: var(--color-primary);
   text-align: center;
   margin: 0;
   height: 70px;
 }
 
-.footer p{
+.footer p {
   padding-top: 30px;
 }

@@ -13,6 +13,15 @@
     <title>Dashboard</title>
   </head>
   <body>
+    <div class="sidebar" id="mySidebar">
+      <a href="#" class="cloneBtn" onclick="closeNav()">X</a>
+      <div class="sidebar-display">
+        <a href="#">Dashboard</a>
+        <a href="#">Meu Perfil</a>
+        <a href="#">Configurações</a>
+        <a href="#">Suporte</a>
+      </div>
+    </div>
 
     <div class="header">
       <a class="openbtn" onclick="openNav()">☰</a>
@@ -38,6 +47,7 @@
           <h3>Assinantes por esporte</h3>
           <img src="img/barras.PNG" alt="" />
         </div>
+
         <div class="graph g-2">
           <h3>Assinantes por idade</h3>
           <img src="img/pizza.PNG" alt="" />
@@ -87,15 +97,15 @@
     </div>
 
     <script>
-    //   function closeNav() {
-    //     document.getElementById("mySidebar").style.width = "0";
-    //     document.getElementById("main").style.marginLeft = "0";
-    //   }
+      function closeNav() {
+        mySidebar.style.width = "0";
+        main.style.marginLeft = "0";
+      }
 
-    //   function openNav() {
-    //     document.getElementById("mySidebar").style.width = "250px";
-    //     document.getElementById("main").style.marginLeft = "250px";
-    //   }
-    // </script>
+      function openNav() {
+        mySidebar.style.width = "250px";
+        main.style.marginLeft = "250px";
+      }
+    </script>
   </body>
 </html>

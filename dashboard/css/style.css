@@ -35,6 +35,10 @@ body {
   color: #ffffff;
 }
 
+.box:hover {
+  opacity: 0.5;
+}
+
 .b-green {
   background-color: #27ae60;
 }
@@ -89,7 +93,8 @@ body {
   background-color: #1d2d3e;
   position: fixed;
   overflow-x: hidden;
-  transition: 0.3s;
+
+  transition: 0.5s;
 }
 
 .sidebar a {
@@ -97,10 +102,21 @@ body {
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  display: block;
+}
+
+.sidebar-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  align-items: center;
 }
 
 .sidebar .closebtn {
   font-size: 37px;
   margin-left: 80%;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
 }
