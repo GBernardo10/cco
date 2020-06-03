@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/config.css" />
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="#" class="closebtn" onclick="closeNav()">×</a>
+      <a href="dashboard.html"> <i class="fas fa-chart-line"></i> 2Dashboard</a>
+      <a href="#"> <i class="fas fa-users"></i> Meu Perfil</a>
+      <a href="#"> <i class="fas fa-clipboard-list"></i> Relatórios</a>
+      <a href="#"> <i class="fas fa-cog"></i> Configurações</a>
+      <a href="#"> <i class="fas fa-cog"></i> Parametros</a>
+      <a href="contato.html"> <i class="fas fa-address-book"></i> Contato</a>
+    </div>
+
+    <div class="header">
+      <a class="openbtn" onclick="openNav()">☰</a>
+      <a href="#"><img src="img/LOGO.png" alt="" /></a>
+    </div>
+
+    <div class="main-config" id="main">
+      <div class="img_config"></div>
+      <div class="container">
+          <h1>Mudar senha</h1>
+          <form action="">
+            <div class="form-group">
+              <label for="mail">Digite seu email</label>
+              <input class="input-padrao" required placeholder="Email" type="email" name="" id="mail" />
+              <label for="current_password">Digite sua senha atual</label>
+              <input class="input-padrao" required placeholder="Senha atual" type="password" name="" id="current_password" />
+              <label for="password">Digite sua nova senha</label>
+              <input class="input-padrao" required placeholder="Senha nova" type="password" name="" id="password" />
+              <label for="confirm_password">Confirme sua senha</label>
+              <input class="input-padrao" required placeholder="Confirmar senha" type="password" name="" id="confirm_password" />
+              <button class="btngreen" type="submit">Alterar</button>
+            </form>
+          </div>
+
+      
+      </div>
+    </div>
+  </body>
+</html>

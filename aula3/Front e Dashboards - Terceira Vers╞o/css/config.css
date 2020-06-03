@@ -1,0 +1,55 @@
+label {
+  padding: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 375px;
+  background-color: whitesmoke;
+  width: 50%;
+  box-shadow: 0px 0px 10px -5px black;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+
+.img_config {
+  position: absolute;
+  background: url(../img/undraw_my_password_d6kg.svg);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+  z-index: -1;
+  left: 10px;
+  top: 50px;
+}
+
+.main-config {
+  position: relative;
+  overflow: hidden;
+}
+
+.input-padrao {
+  padding: 10px 25px;
+
+  border-radius: 5px;
+  border: solid 1px #bbbbbb;
+}
+
+.btngreen {
+  background-color: #27ae60;
+  border: none;
+  width: 30%;
+  margin: 10px 0;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 25px;
+}
