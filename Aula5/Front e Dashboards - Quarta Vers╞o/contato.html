@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/form-style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/9e43a3780f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/menu.js"></script>
+    <title>Cadastre-se</title>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="#" class="closebtn" onclick="closeNav()">×</a>
+      <a href="dashboard.html"> <i class="fas fa-chart-line"></i> 2Dashboard</a>
+      <a href="#"> <i class="fas fa-users"></i> Meu Perfil</a>
+      <a href="#"> <i class="fas fa-clipboard-list"></i> Relatórios</a>
+      <a href="#"> <i class="fas fa-cog"></i> Configurações</a>
+      <a href="contato.html"> <i class="fas fa-address-book"></i> Contato</a>
+    </div>
+
+    <div class="header">
+      <a class="openbtn" onclick="openNav()">☰</a>
+      <div class="notifica">
+        <a href="#"><i class="fas fa-bell fa-2x"></i></a>
+      </div>
+    </div>
+
+    <div class="main-contato">
+      <h1>Entre em contato</h1>
+      <form>
+        <div id="mensagemAcerto"></div>
+        <ul id="mensagemErro" class="m-erro"></ul>
+
+        <label for="nomesobrenome">Nome e Sobrenome:</label>
+        <input type="text" id="nomesobrenome" class="input-padrao" />
+
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          class="input-padrao"
+          placeholder="seuemail@dominio.com"
+        />
+
+        <label for="telefone">Telefone:</label>
+        <input
+          type="tel"
+          id="telefone"
+          class="input-padrao"
+          placeholder="00 9 0000-0000"
+        />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea
+          name=""
+          cols="70"
+          rows="10"
+          id="mensagem"
+          class="input-padrao"
+        ></textarea>
+
+        <label
+          >Avaliação:
+          <input class="input-padrao" id="avaliacao" />
+        </label>
+
+        <div>
+          <p>Como prefere nosso contato:</p>
+
+          <label for="radio-email">
+            <input type="radio" name="contato" value="email" id="radio-email" />
+            E-mail
+          </label>
+
+          <label for="radio-telefone">
+            <input
+              type="radio"
+              name="contato"
+              value="telefone"
+              id="radio-telefone"
+            />Telefone
+          </label>
+
+          <label for="radio-whatsapp">
+            <input
+              type="radio"
+              name="contato"
+              value="whatsapp"
+              id="radio-whatsapp"
+              checked
+            />
+            WhatsApp
+          </label>
+        </div>
+
+        <label>
+          <input type="checkbox" class="checkbox" checked /> Quero receber
+          nossas novidades por e-mail
+        </label>
+
+        <button
+          type="button"
+          onclick="btnEnviaContato()"
+          class="input-padrao btngreen"
+        >
+          dsdsds
+        </button>
+      </form>
+
+      <div class="form-image"></div>
+    </div>
+    <script>
+      function btnEnviaContato() {
+        var erros = validaContato();
+        mensagemErro.innerHTML = "";
+        mensagemAcerto.innerHTML = "";
+
+        if (erros.length > 0) {
+          for (var i = 0; i < erros.length; i++) {
+            var erro = erros[i];
+            var li = document.createElement("li");
+            li.innerHTML = erro;
+            mensagemErro.appendChild(li);
+          }
+        } else {
+          var p = document.createElement("p");
+          p.innerHTML = "Sua mensagem foi enviada!";
+          mensagemAcerto.appendChild(p);
+        }
+
+        // Aqui vai ter um código que envia as
+        // informações preenchidas para o BD
+        return;
+      }
+
+      function validaContato() {
+        var erros = [];
+        console.log(email.value.indexOf("@") == -1);
+
+        if (!nomesobrenome.value) {
+          erros.push("O nome não foi preenchido");
+        }
+
+        if (
+          nomesobrenome.value.search(" ") == -1 ||
+          nomesobrenome.value[nomesobrenome.value.length - 1] == " " ||
+          nomesobrenome.value[0] == " "
+        ) {
+          erros.push("Insira o sobrenome");
+        }
+
+        if (!mensagem.value) {
+          erros.push("A mensagem precisa ser preenchida!");
+        }
+
+        if (
+          telefone.value.search("-") == -1 ||
+          telefone.value.length < 12 ||
+          telefone.value[telefone.value.length - 5] != "-"
+        ) {
+          erros.push("O telefone deve ter formato: 00 90000-0000");
+        }
+
+        if (!avaliacao.value || isNaN(avaliacao.value)) {
+          erros.push("Insira um número valido avaliação");
+        }
+        
+        if (email.value.indexOf("@") == -1) {
+          erros.push("O formato de email é: usuario@dominio.com");
+        } else {
+          var parts = email.value.split("@");
+          var domain = parts[1];
+
+          if (domain.indexOf(".") == -1) {
+            erros.push("O formato de email é: usuario@dominio.com");
+          } else {
+            var domainParts = domain.split(".");
+            var ext = domainParts[1];
+
+            if (ext.length > 4 || ext.length < 2) {
+              erros.push("O formato de email é: usuario@dominio.com");
+            }
+          }
+        }
+
+        return erros;
+      }
+    </script>
+  </body>
+</html>

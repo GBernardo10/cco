@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/parametros.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/menu.js"></script>
+    <title>Parametros</title>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="#" class="closebtn" onclick="closeNav()">×</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#">Meu Perfil</a>
+      <a href="#">Relatórios</a>
+      <a href="#">Configurações</a>
+      <a href="contato.html">Contato</a>
+    </div>
+
+    <div class="header">
+      <a class="openbtn" onclick="openNav()">☰</a>
+      <a href="#"><img src="img/LOGO.png" alt="" /></a>
+    </div>
+
+    <div class="main-contato">
+      <h1>Cadastro de colaborador</h1>
+      <form>
+        <label for="code">Codigo do funcionario:</label>
+        <input
+          type="number"
+          id="code"
+          class="input-padrao"
+          required
+          placeholder="codigo"
+        />
+        <label for="nomesobrenome">Nome e Sobrenome:</label>
+        <input type="text" id="nomesobrenome" class="input-padrao" required />
+
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          class="input-padrao"
+          required
+          placeholder="seuemail@dominio.com"
+        />
+        <label for="profile">Perfils:</label>
+        <select required class="select-input input-padrao" name="" id="profile">
+          <option value="">Selecione um perfil</option>
+          <option value="admin">Admin</option>
+          <option value="master">Master</option>
+          <option value="coo">Coordenador</option>
+          <option value="sup">Supervisor</option>
+        </select>
+
+        <label for="phone">Celular:</label>
+        <input
+          type="tel"
+          id="phone"
+          class="input-padrao"
+          required
+          placeholder="(DDD) x xxxx-xxxx"
+        />
+        <div>
+          <p>Possui experiencia como analista de dados?</p>
+          <label for="no">
+            <input type="radio" name="contato" value="no" id="no" />
+            Não
+          </label>
+          <label for="yes">
+            <input type="radio" name="contato" value="yes" id="yes" />
+            Sim
+          </label>
+        </div>
+        <input type="submit" value="ENVIAR" class="input-padrao btngreen" />
+      </form>
+
+      <div class="form-image"></div>
+    </div>
+  </body>
+</html>

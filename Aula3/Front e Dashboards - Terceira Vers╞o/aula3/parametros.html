@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parametros</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="parametros.css" />
+    <script src="../js/menu.js"></script>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="#" class="closebtn" onclick="closeNav()">×</a>
+      <a href="dashboard.html"> <i class="fas fa-chart-line"></i> 2Dashboard</a>
+      <a href="#"> <i class="fas fa-users"></i> Meu Perfil</a>
+      <a href="#"> <i class="fas fa-clipboard-list"></i> Relatórios</a>
+      <a href="#"> <i class="fas fa-cog"></i> Configurações</a>
+      <a href="#"> <i class="fas fa-cog"></i> Parametros</a>
+      <a href="contato.html"> <i class="fas fa-address-book"></i> Contato</a>
+    </div>
+    <div class="header">
+      <a class="openbtn" onclick="openNav()">☰</a>
+      <a href="#"><img src="img/LOGO.png" alt="" /></a>
+    </div>
+
+    <div class="main-cadastro" id="main">
+      <h1>Cadastro de Colaborador</h1>
+      <form>
+        <label for="code">Codigo do Funcionario:</label>
+        <input required class="input-padrao" id="code" type="number" />
+
+        <label for="name">Nome e Sobrenome:</label>
+        <input required class="input-padrao" id="name" type="text" />
+
+        <label for="mal">Email</label>
+        <input required class="input-padrao" type="email" />
+
+        <label for="profile">Perfis:</label>
+        <select required class="select-input input-padrao" name="">
+          <option value="">Selecione um perfil</option>
+          <option value="admin">Admin</option>
+          <option value="master">Master</option>
+          <option value="coo">Coordenador</option>
+        </select>
+
+        <label for="phone">Celular</label>
+        <input class="input-padrao" id="phone" type="tel" />
+
+        <div>
+          <p>Possui alguma experiencia como analista</p>
+          <label for="no">Não</label>
+          <input
+            class="input-padrao"
+            name="cadastro"
+            type="radio"
+            value="no"
+            id="no"
+          />
+
+          <label for="yes">Sim</label>
+          <input
+            class="input-padrao"
+            name="cadastro"
+            type="radio"
+            value="yes"
+            id="yes"
+          />
+        </div>
+        <input class="input-padrao btngreen" value="Enviar" type="submit" />
+      </form>
+      <div class="form-image"></div>
+    </div>
+  </body>
+</html>
